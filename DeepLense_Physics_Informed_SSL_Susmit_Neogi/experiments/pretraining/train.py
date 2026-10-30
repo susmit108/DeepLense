@@ -118,24 +118,6 @@ def total_variation(x):
     return tv_h + tv_w
 
 
-# def physics_reconstruction_loss(model, batch):
-#     potential, source = model(batch)
-#     alpha = Physics.potential_gradient(potential)
-#     pred_lens = Physics.lens_prediction(source, alpha)
-
-#     reconstruction_loss = F.mse_loss(pred_lens, batch)
-#     source_tv_loss = total_variation(source)
-#     source_positive_loss = F.relu(-source).pow(2).mean()
-#     potential_smoothness_loss = total_variation(potential)
-#     alpha_magnitude_loss = alpha.pow(2).mean()
-
-#     return (
-#         reconstruction_loss
-#         + SOURCE_TV_WEIGHT * source_tv_loss
-#         + SOURCE_POSITIVE_WEIGHT * source_positive_loss
-#         + POTENTIAL_SMOOTHNESS_WEIGHT * potential_smoothness_loss
-#         + ALPHA_MAGNITUDE_WEIGHT * alpha_magnitude_loss
-#     )
 
 
 def physics_reconstruction_loss(model, batch):
