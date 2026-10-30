@@ -6,7 +6,6 @@ The shared model is implemented in [`ssl_components/model.py`](../ssl_components
 
 ![Model architecture](../assets/model_final_preview.png)
 
-[Open the original architecture PDF](../assets/model_final.pdf).
 
 The pretraining entrypoint constructs `LensModel(64, 16, 1)` with the model's default embedding size (768), depth (3 Transformer blocks), and number of attention heads (12). For a 64×64 input and patch size 16:
 
