@@ -9,7 +9,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 
 ROOT = 'data/regression'
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 NUM_WORKERS = 20
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 NUM_EPOCHS = 100
