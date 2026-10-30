@@ -25,7 +25,7 @@ The shared architecture and physics helpers are in `ssl_components/`. Experiment
 
 ## Architecture
 
-<a href="assets/model_final.pdf"><img src="assets/model_final_preview.png" alt="Model architecture (open PDF)" width="800"></a>
+<img src="assets/model_final_preview.png" alt="Model architecture" width="800">
 
 ## Environment and installation
 
