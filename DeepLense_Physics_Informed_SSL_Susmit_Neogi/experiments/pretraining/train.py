@@ -87,7 +87,7 @@ class LensDataset(Dataset):
             print(f"148 at {image_path}")
         return preprocess_lens_image(image), raw
     
-train_dataset = LensDataset(root=ROOT, split='val') ## <------------ CHANGE
+train_dataset = LensDataset(root=ROOT, split='train') 
 val_dataset = LensDataset(root=ROOT, split='val')
 
 train_dataloader = DataLoader(train_dataset, 
