@@ -2,6 +2,10 @@
 
 This directory contains shared model and physics utilities, along with experiment entrypoints for self-supervised pretraining, classification, regression, and arc-feature classification.
 
+# Blog
+
+[GSoC Final Submission Blog](https://susmit108.github.io/gsoc/ml4sci/deeplense/2026/10/29/physics-constrained-lensing.html)
+
 ## Project structure
 
 ```text
@@ -18,6 +22,10 @@ This directory contains shared model and physics utilities, along with experimen
 ```
 
 The shared architecture and physics helpers are in `ssl_components/`. Experiment-specific loading, training, evaluation, and command-line options are defined in the corresponding files under `experiments/`.
+
+## Architecture
+
+<a href="assets/model_final.pdf"><img src="assets/model_final_preview.png" alt="Model architecture (open PDF)" width="800"></a>
 
 ## Environment and installation
 
