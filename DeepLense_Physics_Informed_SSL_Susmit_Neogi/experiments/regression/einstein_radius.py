@@ -10,7 +10,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 ROOT = 'data/regression'
 BATCH_SIZE = 64
-NUM_WORKERS = 10
+NUM_WORKERS = 20
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 NUM_EPOCHS = 100
 ENCODER_CHECKPOINT_PATH = 'checkpoints/lens_model_i_physics.pt'
