@@ -16,17 +16,6 @@ EPSILON = 1e-6
 REC_WEIGHT = 1.0         # preprocessed-image MSE — the main data term
 RAW_REC_WEIGHT = 0.1     # log+z-normalised raw flux — secondary data term
 
-# REC_WEIGHT = 0         # preprocessed-image MSE — the main data term
-# RAW_REC_WEIGHT = 0
-
-
-# Physics-regularizer weights (kept small so the reconstruction term dominates).
-# POISSON_WEIGHT = 1e-2
-# CURL_WEIGHT = 1e-3
-# SMOOTH_PSI_WEIGHT = 1e-4
-# SMOOTH_KAPPA_WEIGHT = 1e-4
-# POS_KAPPA_WEIGHT = 1e-2
-
 
 POISSON_WEIGHT = 0
 CURL_WEIGHT = 0
