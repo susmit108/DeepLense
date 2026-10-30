@@ -1,4 +1,4 @@
-# Physics-Constrained Self-Supervised Representations for Gravitational-Lensing Images
+# Physics-Informed Self-Supervised Representations for Gravitational-Lensing Images
 
 This directory contains shared model and physics utilities, along with experiment entrypoints for self-supervised pretraining, classification, regression, and arc-feature classification.
 
