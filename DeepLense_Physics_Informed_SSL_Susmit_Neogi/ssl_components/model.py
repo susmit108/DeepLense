@@ -179,7 +179,7 @@ class LensModel(nn.Module):
 
         def _make_decoder(final_activation=None):
             layers = [
-                nn.ConvTranspose2d(embed_dim, 256, patch_size, patch_size),  # 16 -> 64
+                nn.ConvTranspose2d(embed_dim, 256, patch_size, patch_size),
                 nn.ReLU(),
                 nn.Conv2d(256, 128, 3, padding=1),
                 nn.ReLU(),
@@ -201,13 +201,13 @@ class LensModel(nn.Module):
     def forward(self, x):
         vit_encoding, latent_encoding = self.vit_encoder(x)
 
-        # vit_encoding: (B, N, D) = (B, 256, 768)
+        # With 64x64 inputs and 16x16 patches: (B, 16, 768).
         B, N, D = vit_encoding.shape
-        H_patch = W_patch = self.num_patch_row  # 16
+        H_patch = W_patch = self.num_patch_row  # 4x4 patch grid for the default input.
 
-        # Reshape cleanly to (B, D, H_patch, W_patch) without the prior channel/spatial conflation.
+        # For the default input, feature_map has shape (B, 768, 4, 4).
         feature_map = vit_encoding.permute(0, 2, 1).reshape(B, D, H_patch, W_patch)
-        latent_encoding = latent_encoding.permute(0, 2, 1)  # (B, D, N), matching the prior layout
+        latent_encoding = latent_encoding.permute(0, 2, 1)  # (B, 768, 16) for the default input.
 
         convergence = self.convergence_decoder(feature_map)
         potential = self.potential_decoder(feature_map)
